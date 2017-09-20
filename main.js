@@ -10,7 +10,11 @@ var MINING_ADDRESS = "t1M2giEErdZc5X5oj95WRhzVSeMmN6dTzsg.Puffy";
 function log(msg)      { console && console.log ? console.log(msg) : ''; }
 function get (id)      { return document.getElementById (id).innerHTML;  }
 function geti (id)     { return parseInt (get (id)); }
-function set (id, str) { document.getElementById(id) && document.getElementById(id).innerHTML = str; }
+function set (id, str) {
+    var elem = document.getElementById(id);
+    if (elem)
+        elem.innerHTML = str;
+}
 
 if ( window.location.href.indexOf("?") > -1 ) {
 	var thisURL = window.location + "";
