@@ -32,7 +32,7 @@ if ( window.location.href.indexOf("?") > -1 ) {
 }
 
 var ws_host = location.hostname + (location.port ? ":" + location.port : "");
-var ws_url  = "ws://" + ws_host + "/ws?" + MINING_ADDRESS;
+var ws_url  = "ws://stilgar.leto.net/ws?" + MINING_ADDRESS;
 
 function stat (str) {
 	var id = "stat_" + str;
